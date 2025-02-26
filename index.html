@@ -15,23 +15,52 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="d-flex justify-content-center align-items-center">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="input-group d-flex flex-column mb-2">
-            <label for="start-shift-time"
-              >Choose the day you start working</label
+      <div class="row d-flex justify-content-center">
+        <div
+          class="col-md-7 col-lg-6 col-sm-12 col-sx-12 p-5 bg-light fw-light rounded shadow"
+          id="content"
+        >
+          <h2 class="text-center mb-4">
+            <i class="bi bi-stopwatch me-2"></i>Oblicz, ile godzin pracowałeś
+            nocą
+          </h2>
+          <div class="input-group d-flex flex-column mb-3">
+            <label for="start-shift-time" class="mb-2 fs-5"
+              >Wybierz dzień i godzinę od której zacząłeś zmianę:</label
             >
 
-            <input type="datetime-local" id="start-shift-time" />
+            <input
+              type="datetime-local"
+              id="start-shift-time"
+              class="border-1 p-1 rounded mb-3"
+            />
 
-            <label for="end-shifted-time">Choose the day you end working</label>
+            <label for="end-shifted-time" class="mb-2 fs-5"
+              >Wybierz dzień i godzinę od której skończyłeś zmianę:</label
+            >
 
-            <input type="datetime-local" id="end-shifted-time" />
+            <input
+              type="datetime-local"
+              id="end-shifted-time"
+              class="border-1 p-1 rounded mb-1"
+            />
           </div>
-          <button type="button" class="btn btn-danger">Test</button>
+          <button type="button" class="btn btn-primary w-100">Oblicz</button>
+
+          <div
+            class="d-flex align-items-center justify-content-center mt-3 fs-5"
+          >
+            <p>Tutaj pojawi się wynik.</p>
+          </div>
         </div>
       </div>
     </div>

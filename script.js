@@ -21,20 +21,16 @@ function countNightHours(startTime, endTime) {
     let nightStart = new Date(startDate);
     let nightEnd = new Date(startDate);
 
-    // Set night period (22:00 to 06:00)
     nightStart.setHours(22, 0, 0, 0);
     nightEnd.setHours(6, 0, 0, 0);
-    nightEnd.setDate(nightEnd.getDate() + 1); // Move to next day
+    nightEnd.setDate(nightEnd.getDate() + 1);
 
-    // Calculate hours within the night period
     if (startDate > nightStart) nightStart = new Date(startDate);
     if (endDate < nightEnd) nightEnd = new Date(endDate);
 
     if (nightStart < nightEnd) {
-      totalNightHours += (nightEnd - nightStart) / (1000 * 60 * 60); // Convert milliseconds to hours
     }
 
-    // Move to the next day
     startDate.setDate(startDate.getDate() + 1);
     startDate.setHours(0, 0, 0, 0);
   }
