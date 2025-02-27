@@ -6,6 +6,10 @@ body {
   background-color: #f4f7f6;
 }
 
+.container {
+  animation: fade 1s ease-in-out;
+}
+
 .btn-primary {
   background-color: #007bff;
   border-color: #007bff;
@@ -20,5 +24,14 @@ body {
 @media (max-width: 576px) {
   label {
     text-align: center;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
