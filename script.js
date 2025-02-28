@@ -53,7 +53,7 @@ function calculateNightHoursAndMinutes(startDateTime, endDateTime) {
   }
 
   const totalNightHours = Math.floor(totalNightMinutes / 60);
-  const remainingMinutes = (totalNightMinutes % 60) - 1;
+  const remainingMinutes = totalNightMinutes % 60;
 
   return `<span class='fw-bold'>${totalNightHours}h</span> i <span class='fw-bold'>${remainingMinutes}min</span>`;
 }
